@@ -1,0 +1,548 @@
+.tour-guide-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background-color: #f0f7fa;
+  color: #2c3e50;
+}
+
+.tour-guide-page h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2.2rem;
+  color: #3498db;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.tour-guide-page p {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  padding: 0 15px;
+  box-sizing: border-box;
+  color: #34495e;
+  line-height: 1.6;
+}
+
+.intro-text {
+  background-color: #d6eaf8;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Search and Filter Styles */
+.search-filter {
+  margin-bottom: 2rem;
+}
+
+.search-box {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 0.8rem;
+  border: 1px solid #bed4e6;
+  border-radius: 5px 0 0 5px;
+  font-size: 1rem;
+}
+
+.search-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0 1.5rem;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.search-button:hover {
+  background-color: #2980b9;
+}
+
+.filter-options {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.filter-select {
+  flex: 1;
+  min-width: 180px;
+  padding: 0.8rem;
+  border: 1px solid #bed4e6;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 0.9rem;
+  color: #2c3e50;
+}
+
+/* Tour Guide List and Cards */
+.tour-guide-list {
+  border: 1px solid #aed6f1;
+  border-radius: 10px;
+  padding: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #ebf5fb;
+  box-shadow: 0 3px 10px rgba(52, 152, 219, 0.1);
+}
+
+.guide-card {
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.guide-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.2);
+}
+
+.guide-card-content {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.guide-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1.5rem;
+  border: 3px solid #3498db;
+}
+
+.guide-details {
+  flex-grow: 1;
+}
+
+.guide-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.8rem;
+}
+
+.guide-name {
+  font-size: 1.4rem;
+  color: #2980b9;
+  margin: 0;
+}
+
+.guide-rating {
+  display: flex;
+  align-items: center;
+}
+
+.guide-rating .star-filled {
+  color: #f39c12;
+}
+
+.guide-rating .star-empty {
+  color: #ddd;
+}
+
+.guide-rating .star-half {
+  color: #f39c12;
+}
+
+.guide-rating span {
+  margin-left: 5px;
+  color: #7f8c8d;
+}
+
+.guide-speciality {
+  color: #7f8c8d;
+  margin-bottom: 0.7rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.guide-speciality svg {
+  color: #3498db;
+}
+
+.guide-description {
+  color: #34495e;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.guide-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.guide-meta-item {
+  font-size: 0.95rem;
+}
+
+.guide-languages {
+  font-size: 0.95rem;
+  margin-bottom: 0.8rem;
+}
+
+.guide-availability {
+  margin-top: 0.8rem;
+}
+
+.availability-label {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  margin-bottom: 0.5rem;
+}
+
+.availability-days {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.day-badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.day-badge.available {
+  background-color: #d5f5e3;
+  color: #27ae60;
+}
+
+.day-badge.unavailable {
+  background-color: #f5f5f5;
+  color: #bdc3c7;
+}
+
+.guide-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: auto;
+}
+
+.book-guide-btn,
+.contact-guide-btn {
+  padding: 0.7rem 1.5rem;
+  border-radius: 5px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.book-guide-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  flex-grow: 1;
+}
+
+.book-guide-btn:hover {
+  background-color: #2980b9;
+}
+
+.contact-guide-btn {
+  background-color: #2ecc71;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  flex-basis: 120px;
+}
+
+.contact-guide-btn:hover {
+  background-color: #27ae60;
+}
+
+/* Modal Styles */
+.booking-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.booking-modal {
+  background-color: white;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #7f8c8d;
+  transition: color 0.3s;
+}
+
+.close-modal:hover {
+  color: #e74c3c;
+}
+
+.booking-modal h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.guide-info-summary {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.guide-mini-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1.5rem;
+  border: 2px solid #3498db;
+}
+
+.guide-summary-details h3 {
+  color: #2980b9;
+  margin: 0 0 0.5rem 0;
+}
+
+.guide-summary-details p {
+  margin: 0;
+  text-align: left;
+  padding: 0;
+  font-size: 0.95rem;
+}
+
+.booking-form .form-group {
+  margin-bottom: 1.2rem;
+}
+
+.booking-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.booking-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.booking-summary {
+  margin-top: 1.5rem;
+  padding: 1.2rem;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+}
+
+.booking-summary h4 {
+  margin-top: 0;
+  color: #2c3e50;
+  font-size: 1.1rem;
+}
+
+.cost-calculation {
+  font-size: 0.95rem;
+}
+
+.cost-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed #ddd;
+}
+
+.cost-item.total {
+  border-bottom: none;
+  border-top: 2px solid #ddd;
+  margin-top: 0.5rem;
+  padding-top: 0.8rem;
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.cancel-btn,
+.submit-btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  flex: 1;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.cancel-btn {
+  background-color: #95a5a6;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background-color: #7f8c8d;
+}
+
+.submit-btn {
+  background-color: #3498db;
+  color: white;
+}
+
+.submit-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .tour-guide-page {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .tour-guide-page h1 {
+    font-size: 1.8rem;
+  }
+
+  .tour-guide-list {
+    padding: 1.5rem 1rem;
+  }
+
+  .guide-card-content {
+    flex-direction: column;
+  }
+
+  .guide-image {
+    margin-right: 0;
+    margin-bottom: 1rem;
+    align-self: center;
+  }
+
+  .guide-header {
+    flex-direction: column;
+  }
+
+  .guide-rating {
+    margin-top: 0.5rem;
+  }
+
+  .guide-actions {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .contact-guide-btn {
+    flex-basis: auto;
+  }
+
+  .booking-modal {
+    width: 95%;
+    padding: 1.5rem;
+  }
+
+  .guide-info-summary {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .guide-mini-image {
+    margin-right: 0;
+  }
+
+  .guide-summary-details p {
+    text-align: center;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .tour-guide-page {
+    padding: 1rem 0.5rem;
+  }
+
+  .tour-guide-page h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .tour-guide-page p {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    padding: 0 15px;
+  }
+
+  .tour-guide-list {
+    padding: 1rem;
+  }
+
+  .filter-options {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .filter-select {
+    min-width: 100%;
+  }
+
+  .booking-modal {
+    padding: 1.2rem;
+  }
+}

@@ -1,0 +1,21 @@
+.ulasan-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.ulasan-page h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.ulasan-page p {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.ulasan-list {
+  border: 1px solid #e0e0e0;
+  padding: 2rem;
+  text-align: center;
+}

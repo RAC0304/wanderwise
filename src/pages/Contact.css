@@ -1,0 +1,152 @@
+.contact-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f0f7fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.15);
+}
+
+.contact-container h1 {
+  text-align: center;
+  color: #2980b9;
+  margin-bottom: 1.5rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  color: #34495e;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.8rem;
+  border: 1px solid #bed4e6;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #ecf0f1;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+  background-color: #ffffff;
+}
+
+.form-group textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+button[type="submit"] {
+  background-color: #3498db;
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 0.5rem;
+}
+
+button[type="submit"]:hover {
+  background-color: #2980b9;
+}
+
+.contact-info {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #d6eaf8;
+  border-radius: 8px;
+}
+
+.contact-info h2 {
+  color: #2980b9;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.contact-method {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  color: #34495e;
+}
+
+.contact-method svg {
+  margin-right: 10px;
+  color: #3498db;
+}
+
+.social-links {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #3498db;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.social-link:hover {
+  transform: translateY(-3px);
+  background-color: #2980b9;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-container {
+    padding: 1.5rem;
+    margin: 1.5rem 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contact-container {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .contact-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.7rem;
+  }
+
+  button[type="submit"] {
+    padding: 0.7rem;
+  }
+}
