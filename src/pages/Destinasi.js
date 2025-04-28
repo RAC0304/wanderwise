@@ -255,11 +255,13 @@ const Destinasi = () => {
   const applyFilters = () => {
     let filteredDestinations = [...destinationsData];
 
-    // Save search to history
+    // Save search to history if there's a location or category filter
     if (filters.location || filters.category) {
+      const searchTerm =
+        filters.location || filters.category || "Pencarian baru";
       const newSearch = {
         id: Date.now(),
-        term: filters.location || filters.category || "Pencarian baru",
+        term: searchTerm,
         timestamp: new Date().toISOString(),
       };
       const updatedHistory = [newSearch, ...searchHistory.slice(0, 4)]; // Keep only last 5
@@ -268,28 +270,35 @@ const Destinasi = () => {
     }
 
     // Apply Location filter
-    if (filters.location) {
-      filteredDestinations = filteredDestinations.filter((dest) =>
-        dest.location.toLowerCase().includes(filters.location.toLowerCase())
-      );
+    if (filters.location && filters.location.trim() !== "") {
+      const searchTerms = filters.location.toLowerCase().split(" ");
+      filteredDestinations = filteredDestinations.filter((dest) => {
+        // Check if any search term exists in destination name or location
+        return searchTerms.some(
+          (term) =>
+            dest.name.toLowerCase().includes(term) ||
+            dest.location.toLowerCase().includes(term)
+        );
+      });
     }
 
     // Apply Category filter
-    if (filters.category) {
+    if (filters.category && filters.category !== "") {
       filteredDestinations = filteredDestinations.filter(
         (dest) => dest.category === filters.category
       );
     }
 
     // Apply Rating filter
-    if (filters.rating) {
+    if (filters.rating && filters.rating !== "") {
+      const minRating = parseFloat(filters.rating);
       filteredDestinations = filteredDestinations.filter(
-        (dest) => dest.rating >= parseInt(filters.rating)
+        (dest) => dest.rating >= minRating
       );
     }
 
     // Apply Price Range filter
-    if (filters.priceRange) {
+    if (filters.priceRange && filters.priceRange !== "") {
       const [min, max] = filters.priceRange.split("-").map(Number);
       filteredDestinations = filteredDestinations.filter(
         (dest) => dest.price >= min && dest.price <= max
@@ -297,12 +306,13 @@ const Destinasi = () => {
     }
 
     // Apply Activity filter
-    if (filters.activity) {
+    if (filters.activity && filters.activity !== "") {
       filteredDestinations = filteredDestinations.filter(
         (dest) => dest.activities && dest.activities.includes(filters.activity)
       );
     }
 
+    // If no results, provide a message (handled in the render)
     setDestinations(filteredDestinations);
   };
 
